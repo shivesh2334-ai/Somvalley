@@ -1,5 +1,5 @@
-import os
 
+# Create the vercel.json configuration file
 vercel_config = '''{
   "version": 2,
   "name": "somvalley-play-school",
@@ -17,8 +17,6 @@ vercel_config = '''{
   ]
 }'''
 
-output_path = '/home/claude/output/vercel.json'
-os.makedirs(os.path.dirname(output_path), exist_ok=True)  # ← key fix
-
-with open(output_path, 'w') as f:
+with open('/mnt/agents/output/vercel.json', 'w') as f:
     f.write(vercel_config)
+ 
