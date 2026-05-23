@@ -1,0 +1,92 @@
+
+# Create the vercel.json configuration file
+vercel_config = '''{
+  "version": 2,
+  "name": "somvalley-play-school",
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}'''
+
+with open('/mnt/agents/output/vercel.json', 'w') as f:
+    f.write(vercel_config)
+
+# Create README.md for GitHub
+readme = '''# Somvalley Play School 🎈
+
+A beautiful, responsive website for Somvalley Play School located in IP Extension, Patparganj, Delhi.
+
+## 🌟 Features
+
+- **Modern Design** - Clean, colorful, and child-friendly UI
+- **Fully Responsive** - Works perfectly on mobile, tablet, and desktop
+- **Fast Loading** - Single HTML file with inline CSS and JavaScript
+- **SEO Optimized** - Proper meta tags and semantic HTML
+- **Contact Integration** - Direct call and WhatsApp buttons
+- **Smooth Animations** - Scroll animations and interactive elements
+
+## 📱 Sections
+
+1. **Hero Banner** - School name, slogan "Learn, Play, Grow", and location
+2. **About** - Why choose Somvalley with feature cards
+3. **Experience** - Highlights 25+ years of teaching experience
+4. **Talk to Us** - Contact Mrs. Jaya via Call or WhatsApp
+5. **Address** - Complete address with Google Maps directions
+
+## 📞 Contact Information
+
+- **Phone:** +91 98918 04883
+- **Contact Person:** Mrs. Jaya
+- **Address:** M7, Rama Krishna Apartment, Plot No. 29, IP Extension, Delhi - 110092
+
+## 🚀 Deployment
+
+This website is optimized for [Vercel](https://vercel.com) deployment.
+
+### Deploy to Vercel
+
+1. Push this repository to GitHub
+2. Import the repository in Vercel
+3. Deploy with default settings
+4. Your site will be live!
+
+## 📁 Files
+
+- `index.html` - Main website file
+- `vercel.json` - Vercel deployment configuration
+- `README.md` - This file
+
+## 🎨 Design
+
+- **Colors:** Warm, playful palette suitable for a play school
+- **Fonts:** Nunito & Quicksand (Google Fonts)
+- **Icons:** Font Awesome
+- **Animations:** CSS keyframes and Intersection Observer API
+
+---
+
+Made with ❤️ for Somvalley Play School
+'''
+
+with open('/mnt/agents/output/README.md', 'w', encoding='utf-8') as f:
+    f.write(readme)
+
+print("✅ All files created successfully!")
+print("\n📁 Files in /mnt/agents/output/:")
+print("   1. index.html  - Main website")
+print("   2. vercel.json - Vercel config")
+print("   3. README.md   - Documentation")
+print("\n🚀 Next Steps for GitHub + Vercel Deployment:")
+print("   1. Create a new GitHub repository")
+print("   2. Upload these 3 files to the repository")
+print("   3. Go to vercel.com and import the GitHub repo")
+print("   4. Click Deploy - your site will be live in seconds!")
