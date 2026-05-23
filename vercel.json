@@ -1,4 +1,4 @@
-
+import os
 
 vercel_config = '''{
   "version": 2,
@@ -17,7 +17,8 @@ vercel_config = '''{
   ]
 }'''
 
-with open('/mnt/agents/output/vercel.json', 'w') as f:
+output_path = '/home/claude/output/vercel.json'
+os.makedirs(os.path.dirname(output_path), exist_ok=True)  # ← key fix
+
+with open(output_path, 'w') as f:
     f.write(vercel_config)
-
-
