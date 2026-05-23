@@ -1,5 +1,3 @@
-
-
 vercel_config = '''{
   "version": 2,
   "name": "somvalley-play-school",
@@ -17,6 +15,4 @@ vercel_config = '''{
   ]
 }'''
 
-with open('/mnt/agents/output/vercel.json', 'w') as f:
-    f.write(vercel_config)
  
